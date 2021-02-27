@@ -22,7 +22,7 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import com.sanctionscheck.sanctionscheck.bean.Address;
 import com.sanctionscheck.sanctionscheck.bean.CreditorAccount;
 import com.sanctionscheck.sanctionscheck.bean.DebtorAccount;
-import com.sanctionscheck.sanctionscheck.bean.User;
+import com.sanctionscheck.sanctionscheck.bean.PaymentTransaction;
 import com.sanctionscheck.sanctionscheck.contoller.SanctionsCheckController;
 import com.sanctionscheck.sanctionscheck.service.SanctionsCheckService;
 
@@ -42,7 +42,7 @@ public class SanctionsCheckControllerTest {
 	@Test
 	public void testGetSanctionsCheck_Success() throws Exception {
 
-		User user = new User();
+		PaymentTransaction user = new PaymentTransaction();
 		user.setCreditorAddress("abc");
 		user.setDebtorAddress("xyz");
 		

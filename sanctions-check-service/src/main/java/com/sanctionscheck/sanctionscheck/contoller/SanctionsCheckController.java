@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sanctionscheck.sanctionscheck.bean.User;
+import com.sanctionscheck.sanctionscheck.bean.PaymentTransaction;
 import com.sanctionscheck.sanctionscheck.service.SanctionsCheckService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -23,7 +23,7 @@ public class SanctionsCheckController {
 	private SanctionsCheckService sanctionsCheckService;
 		
 	@GetMapping("/getSanctionsCheck")
-	public ResponseEntity<User> getSanctionsCheck(@RequestBody User user) {
+	public ResponseEntity<PaymentTransaction> getSanctionsCheck(@RequestBody PaymentTransaction user) {
 		log.info("SanctionsCheckController: getSanctionsCheck ::"+ENTERED_METHOD_LOG);
 		return sanctionsCheckService.getSanctionsCheckList(user);
 	}

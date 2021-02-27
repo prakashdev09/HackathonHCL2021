@@ -9,19 +9,21 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class PaymentTransaction {
 
+	private Long transactionId;
 	private String messageID;
 	private String debtorAccount;
 	private String debtorName;
 	private String debtorAddress;
 	private String creditorAccount;
+	private String creditorName;
 	private String creditorAddress; 
 	private String debtorAgentIdentifier;
 	private String creditorAgentIdentifier;
 	private String paymentCurrency;
-	private String paymentAmount;
-	private String valueDate;
+	private Double paymentAmountO;
+	private Date valueDate;
 	private String remittanceInfo;
 	
 }

@@ -16,5 +16,4 @@ public class SanctionsCheckServiceApplication {
 	public RestTemplate restTemplate() {
 		return new RestTemplate();
 	}
-
 }
